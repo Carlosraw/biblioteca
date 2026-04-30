@@ -1,3 +1,4 @@
+############################################################################################
 # MERGE SORT
 def merge_sort(libros: list, campo: str) -> list:
     # Ordena la lista de libros por el valor en campo
@@ -30,7 +31,7 @@ def _merge(izq: list, der: list, campo: str) -> list:
     resultado.extend(der[j:])
     return resultado
 
-
+############################################################################################
 # BUSQUEDA LINEAL
 def busqueda_lineal(libros: list, texto: str) -> list:
     # Busca el valor del texto en titulo, autor, ISBN y categoria de cada libro
@@ -46,9 +47,8 @@ def busqueda_lineal(libros: list, texto: str) -> list:
             resultados.append(libro)
     return resultados
 
-
+############################################################################################
 # BUSQUEDA BINARIA
-
 def busqueda_binaria_isbn(libros: list, isbn: str):
     # Busca un libro por ISBN exacto. La lista debe estar ordenada por ISBN
     libros_ordenados = merge_sort(libros, "isbn")
@@ -64,9 +64,8 @@ def busqueda_binaria_isbn(libros: list, isbn: str):
             der = mid - 1
     return None
 
-
+############################################################################################
 # ARBOL DE CATEGORIAS
-
 def arbol_categorias() -> dict:
     # Retorna la jerarquia de categorias
     return {
